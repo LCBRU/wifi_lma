@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+{% load menu_tags %}
+
+{% block page %}
+
+    {% main_menu %}
+        
+    <div id="content" class="container">
+    <div>
+        {% block content %}{% endblock %}
+    </div>
+{% endblock page %}
