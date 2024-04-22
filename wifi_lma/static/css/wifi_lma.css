@@ -1,0 +1,213 @@
+:root {
+    --body-font-family:Lato;
+    --body-font-weight:400;
+    --body-font-weight-bold:700;
+    --body-line-height: 1.625;
+    --body-font-style: normal;
+    --body-font-size: 1.125rem;
+    --body-paragraph-spacing: 1rem;
+
+    --footer-font-size: 1rem;
+
+    --color-blue: #193e72;
+    --color-grey: #494b50;
+    --color-background: #f1f1f1;
+    --color-outline: #AAA;
+    --color-white: #FFFFFF;
+    --color-red: #ea5d4e;
+    --color-dark-red: #D14435;
+    --color-light-red: #FF7768;
+    --color-red-glow: rgba(234, 93, 78, 0.5);
+    --color-green: #46a86c;
+    --color-dark-green: #2D8F53;
+    --color-light-green: #60C286;
+    --color-green-glow: rgba(70, 168, 108, 0.5);
+    --transition-time: 250ms;
+
+    --border-radius: 5px;
+
+    --margin-label-top: 0.5rem;
+    --margin-label-bottom: 0.1rem;
+}
+
+::selection {
+    background: var(--color-red);
+    color: var(--color-white);
+}
+
+/* Reset Start */
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    -webkit-text-size-adjust: 100%;
+    font-size: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    max-width: var(--viewport-width);
+    line-height: var(--body-line-height);
+}
+
+html {
+    hanging-punctuation: first last;
+}
+
+body {
+    min-height: 100svh;
+    background-color: var(--color-white);
+    color: var(--color-blue);
+    font-weight: var(--body-font-weight);
+    font-size: var(--body-font-size);
+    font-family: var(--body-font-family);
+    font-style: var(--body-font-style);
+    line-height: var(--body-line-height);
+}
+
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+/* Reset End */
+
+/* Layout Start */
+
+body {
+    display: flex;
+    flex-direction: column;
+    max-width: 80rem;
+    margin: auto;
+}
+
+header a {
+    display: block;
+    height: 8rem;
+    background-image: url(../images/nihr-lbrc.png);
+    background-size: 20rem auto;
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+
+main {
+    flex-grow: 1;
+    padding: var(--body-paragraph-spacing);
+    padding-bottom: calc(var(--body-paragraph-spacing) * 2);
+}
+
+footer {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    padding: var(--body-paragraph-spacing);
+    font-size: 1.1rem;
+}
+
+/* Layout End */
+
+/* Nav */
+nav {
+    display: flex;
+}
+
+nav > ul:first-child {
+    flex-grow: 1;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.5rem;
+    color: var(--color-blue);
+    text-decoration: none;
+    transition: color var(--transition-time) ease-in-out,
+        background-color var(--transition-time) ease-in-out;
+}
+
+nav a:hover, nav a:focus, nav a:active{
+    background-color: var(--color-blue);
+    color: var(--color-white);
+}
+
+nav > ul:first-child > li:first-child {
+    background-color: var(--color-blue);
+}
+
+nav > ul:first-child > li:first-child a {
+    font-size: 0;
+}
+
+nav > ul:first-child > li:first-child > a::before {
+    content: "\f015";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: var(--body-font-size);
+    color: var(--color-white);
+}
+
+/* Nav End */
+
+/* Main Start */
+h2, h3, h4 {
+    margin-top: var(--body-paragraph-spacing);
+}
+
+p, ul, ol, img {
+    margin-bottom: var(--body-paragraph-spacing);
+}
+
+ul li, ol li {
+    list-style-position: inside;
+}
+
+h2 {
+    font-weight: var(--body-font-weight-bold);
+    font-size: 1.7rem;
+}
+
+h3 {
+    font-weight: var(--body-font-weight-bold);
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-weight: var(--body-font-weight-bold);
+    font-size: 1.2rem;
+    color: var(--color-grey);
+}
+
+main a {
+    color: var(--color-red);
+    text-decoration: none;
+}
+
+main a:hover, main a:focus, main a:active{
+    text-decoration: underline;
+}
+
+main img.full-width {
+    width: 100%;
+    height: auto;
+}
+
+main img.right {
+    float: right;
+    margin-left: var(--body-paragraph-spacing);
+}
+
+main img.left {
+    float: left;
+    margin-right: var(--body-paragraph-spacing);
+}
+
+/* Main End */

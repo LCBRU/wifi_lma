@@ -3,11 +3,17 @@
 {% load menu_tags %}
 
 {% block page %}
+    <header>
+        <a href="{% slugurl 'home' %}"></a>
+    </header>
 
     {% main_menu %}
-        
-    <div id="content" class="container">
-    <div>
+    
+    <main>
         {% block content %}{% endblock %}
-    </div>
+    </main>
+
+    <footer>
+        Copyright &copy; {% now "Y" %} NIHR Leicester Biomedical Research Centre
+    </footer>
 {% endblock page %}
