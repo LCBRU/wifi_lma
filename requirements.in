@@ -1,5 +1,5 @@
 Django>=4.1,<4.2
 wagtail>=4.2,<4.3
 python-dotenv
-pymysql
+pymysql>=1.1.1
 wagtailmenus
